@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achaar House — Authentic Homemade Pickles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a href="#" class="logo">🥒 Achaar<span>House</span></a>
+      <nav class="nav"><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="admin.html">Admin</a></nav>
+      <button class="cart-btn" id="cart-toggle">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Homemade · Traditional · Fresh</span>
+      <h1>Pickles crafted with love & spice</h1>
+      <p>Mango, lemon, garlic, chilli — choose your favourite in the size that fits your kitchen.</p>
+      <a href="#shop" class="btn-primary">Shop pickles</a>
+    </div>
+  </section>
+
+  <section class="container shop" id="shop">
+    <h2>Our Pickles</h2>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <section class="story container" id="story">
+    <h2>Our Story</h2>
+    <p>Family recipes passed down for generations. Every jar is sun-dried, hand-mixed, and sealed fresh — just like grandma used to make.</p>
+  </section>
+
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-head"><h3>Your Order</h3><button id="cart-close">&times;</button></div>
+    <ul id="cart-list"></ul>
+    <div class="cart-foot">
+      <p>Total: <strong>₹<span id="cart-total">0</span></strong></p>
+      <button class="btn-primary btn-block" id="checkout-open">Proceed to checkout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <dialog id="checkout-dialog">
+    <form id="checkout-form">
+      <h3>Delivery details</h3>
+      <label>Full name<input name="name" required></label>
+      <label>Phone<input name="phone" type="tel" pattern="[0-9]{10}" required></label>
+      <label>Delivery address<textarea name="address" rows="2" required></textarea></label>
+      <div class="form-actions">
+        <button type="button" class="btn-ghost" id="checkout-cancel">Cancel</button>
+        <button type="submit" class="btn-primary">Place order</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="done-dialog">
+    <div class="done-box">
+      <p class="done-emoji">🎉</p>
+      <h3>Order received!</h3>
+      <p id="done-msg"></p>
+      <button class="btn-primary" id="done-close">OK</button>
+    </div>
+  </dialog>
+
+  <footer class="footer"><div class="container">© 2026 Achaar House</div></footer>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
